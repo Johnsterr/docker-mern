@@ -20,7 +20,7 @@
 
 Для клиентских приложений необязательно при запуске контейнера указывать флаг `--network <имя-сети>`
 
-[Раздел в оф. документации](https://docs.docker.com/network/ "Networking overview")
+[Раздел в оф. документации](https://docs.docker.com/network/ "Docker Networking overview")
 
 ## Volumes (тома)
 
@@ -28,8 +28,7 @@
 
 > Например, в БД внесли записи, но после перезапуска контейнера БД их не осталось.
 
-Для исправления такой ситуации используются *Volumes* или *тома*
-.
+Для исправления такой ситуации используются *Volumes* или *тома*.
 
 Команды для работы с томами:
 
@@ -39,4 +38,4 @@
   <br/>
   Пример: `docker volume rm mongo-data`
 
-> [Раздел в оф. документации](https://docs.docker.com/storage/ "Manage data in Docker")
+[Раздел в оф. документации](https://docs.docker.com/storage/ "Manage data in Docker")

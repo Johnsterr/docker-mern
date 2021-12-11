@@ -14,6 +14,8 @@ backend:
 	    --rm \
 	    --name notes-backend \
 	    --network notes-net \
+	    -v ${PWD}/server:/app \
+	    -v /app/node_modules \
 	    --env-file ./config/development.env \
 	    notes-backend
 
@@ -22,4 +24,6 @@ frontend:
 		-d \
 	    --rm \
 	    --name notes-frontend \
+	    -e CHOKIDAR_USEPOLLING=true \
+	    -v ${PWD}/client/src:/app/src \
 	    notes-frontend
