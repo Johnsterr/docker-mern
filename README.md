@@ -10,6 +10,8 @@
   <br/>
   Пример: `docker stop mongodb`
 
+Для запуска в detach-mode (для доступности консоли) к некоторым командам лучше добавить флаг **-d**
+
 ## Network (сеть)
 
 Команды для работы с сетями:
@@ -39,3 +41,20 @@
   Пример: `docker volume rm mongo-data`
 
 [Раздел в оф. документации](https://docs.docker.com/storage/ "Manage data in Docker")
+
+## Docker-compose
+
+Оптимизация запуска окружения, работы с контейнера и т.д.
+
+Команды для работы с Docker-compose:
+
+- `docker-compose up` - команда запускает окружение
+- `docker-compose down` - остановка окружения
+
+> По-умолчанию команда ищет файл **docker-compose.yml** в директории откуда вызвана команда
+
+- `docker-compose -f <имя-файла>` - указание на конкретное имя файла конфигурации docker-compose
+  <br/>
+  Пример: `docker-compose -f docker-compose.yml up -d`
+
+[Раздел в оф. документации](https://docs.docker.com/compose/compose-file/ "Compose file")
